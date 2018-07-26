@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnShadow: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        btnShadow.layer.shadowColor = UIColor.black.cgColor
+        btnShadow.layer.shadowOpacity = 0.3
+        btnShadow.layer.shadowRadius = 1
+        btnShadow.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
 
     override func didReceiveMemoryWarning() {
